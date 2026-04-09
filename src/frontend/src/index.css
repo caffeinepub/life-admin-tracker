@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "DM Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: monospace;
+    --radius: 0.5rem;
+
+    --background: 0.98 0.01 0;
+    --foreground: 0.15 0 0;
+    --card: 0.99 0.005 0;
+    --card-foreground: 0.15 0 0;
+    --popover: 0.99 0.005 0;
+    --popover-foreground: 0.15 0 0;
+
+    --primary: 0.45 0.12 252;
+    --primary-foreground: 0.98 0 0;
+
+    --secondary: 0.93 0.01 0;
+    --secondary-foreground: 0.25 0 0;
+    --muted: 0.93 0.01 0;
+    --muted-foreground: 0.55 0 0;
+
+    --accent: 0.62 0.1 268;
+    --accent-foreground: 0.98 0 0;
+
+    --destructive: 0.55 0.2 25;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.92 0.01 0;
+    --input: 0.94 0.01 0;
+    --ring: 0.45 0.12 252;
+
+    --chart-1: 0.55 0.2 25;
+    --chart-2: 0.68 0.18 64;
+    --chart-3: 0.62 0.1 268;
+    --chart-4: 0.45 0.12 252;
+    --chart-5: 0.75 0.08 100;
+
+    --sidebar: 0.98 0 0;
+    --sidebar-foreground: 0.15 0 0;
+    --sidebar-primary: 0.45 0.12 252;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.93 0.01 0;
+    --sidebar-accent-foreground: 0.25 0 0;
+    --sidebar-border: 0.92 0.01 0;
+    --sidebar-ring: 0.45 0.12 252;
+  }
+
+  .dark {
+    --background: 0.145 0 0;
+    --foreground: 0.95 0 0;
+    --card: 0.18 0 0;
+    --card-foreground: 0.95 0 0;
+    --popover: 0.22 0 0;
+    --popover-foreground: 0.95 0 0;
+
+    --primary: 0.8 0 0;
+    --primary-foreground: 0.145 0 0;
+
+    --secondary: 0.22 0 0;
+    --secondary-foreground: 0.85 0 0;
+    --muted: 0.22 0 0;
+    --muted-foreground: 0.55 0 0;
+
+    --accent: 0.8 0 0;
+    --accent-foreground: 0.145 0 0;
+
+    --destructive: 0.65 0.19 22;
+    --destructive-foreground: 0.145 0 0;
+
+    --border: 0.28 0 0;
+    --input: 0.28 0 0;
+    --ring: 0.8 0 0;
+
+    --chart-1: 0.49 0.24 264;
+    --chart-2: 0.7 0.17 162;
+    --chart-3: 0.77 0.19 70;
+    --chart-4: 0.63 0.27 304;
+    --chart-5: 0.65 0.25 16;
+
+    --sidebar: 0.18 0 0;
+    --sidebar-foreground: 0.95 0 0;
+    --sidebar-primary: 0.8 0 0;
+    --sidebar-primary-foreground: 0.145 0 0;
+    --sidebar-accent: 0.22 0 0;
+    --sidebar-accent-foreground: 0.85 0 0;
+    --sidebar-border: 0.28 0 0;
+    --sidebar-ring: 0.8 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .urgency-overdue {
+    @apply border-l-4 border-destructive;
+  }
+  .urgency-this-week {
+    @apply border-l-4 border-[oklch(0.68_0.18_64)];
+  }
+  .urgency-later {
+    @apply border-l-4 border-accent;
+  }
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}

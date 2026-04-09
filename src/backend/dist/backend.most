@@ -1,0 +1,30 @@
+// Version: 1.0.0
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type TaskCategory__553091931 =
+  {#Bills; #Documents; #Healthcare; #Insurance; #Other};
+type TaskStatus__843367325 = {#Completed; #Pending};
+type Task__431803600 =
+  {
+    category : TaskCategory__553091931;
+    createdAt : Timestamp__581234846;
+    description : Text;
+    dueDate : Int;
+    id : Nat;
+    status : TaskStatus__843367325;
+    title : Text;
+    userId : UserId__922228416
+  };
+type Timestamp__301639476 = Int;
+type Timestamp__581234846 = Timestamp__301639476;
+type UserId__158757552 = Principal;
+type UserId__922228416 = UserId__158757552;
+actor {
+  stable counter : {var value : Nat};
+  stable tasks :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Task__431803600]];
+      var elementIndex : Nat__490723111
+    }
+};

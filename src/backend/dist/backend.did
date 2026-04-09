@@ -1,0 +1,36 @@
+type UserId = principal;
+type Timestamp = int;
+type TaskStatus = 
+ variant {
+   Completed;
+   Pending;
+ };
+type TaskCategory = 
+ variant {
+   Bills;
+   Documents;
+   Healthcare;
+   Insurance;
+   Other;
+ };
+type Task = 
+ record {
+   category: TaskCategory;
+   createdAt: Timestamp;
+   description: text;
+   dueDate: int;
+   id: nat;
+   status: TaskStatus;
+   title: text;
+   userId: UserId;
+ };
+service : {
+  createTask: (title: text, description: text, dueDate: int, category:
+   TaskCategory) -> (nat);
+  deleteTask: (id: nat) -> (bool);
+  getMyTasks: () -> (vec Task) query;
+  getMyUpcomingTasks: () -> (vec Task) query;
+  toggleTaskStatus: (id: nat) -> (bool);
+  updateTask: (id: nat, title: text, description: text, dueDate: int,
+   category: TaskCategory) -> (bool);
+}

@@ -1,0 +1,25 @@
+{
+  "overview": "Life Admin Tracker is a professional, light-themed productivity web app that helps users manage and track important recurring life tasks — bill payments, document renewals, insurance, and deadlines — so nothing gets forgotten.",
+  "features": [
+    "Task creation with title, due date, category, and description",
+    "Dashboard showing upcoming tasks sorted by urgency",
+    "Visual urgency indicators: overdue, due this week, upcoming",
+    "Task categories: Bills, Documents, Insurance, Healthcare, Other",
+    "One-click complete/incomplete toggle",
+    "Search and filter tasks by category",
+    "Task count summary (total, completed, overdue)",
+    "Persistent storage across sessions",
+    "Login via Internet Identity"
+  ],
+  "category": "productivity",
+  "tags": [
+    "life-admin",
+    "task-tracker",
+    "productivity",
+    "reminders",
+    "bills",
+    "deadlines",
+    "college-project"
+  ],
+  "last_updated": "2026-04-09T07:19:49.579Z"
+}
